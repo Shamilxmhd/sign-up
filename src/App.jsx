@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-
+    setFormValues({ username: '', email: '', password: '', confirmPassword: '' })
   };
 
 
@@ -58,15 +58,15 @@ function App() {
   return (
     <>
       <div className="d-flex justify-content-center align-items-center" style={{ width: '100%', height: '100vh', backgroundColor: '#2a373d' }}>
-        <div className="container w-50 ">
+        <div className="container w-50">
           {Object.keys(formErrors).length === 0 && isSubmit ? (
             <div className="text-center fw-bold fs-3 mb-2 text-light">
-              Signed in successfully <i class="fa-solid fa-check text-light ms-2"></i>
+              Signup successful! <i class="fa-solid fa-check text-light ms-2"></i>
             </div>
           ) :
             (console.log("Entered Details", formValues))
           }
-          <div style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', padding: '80px' }} className='card shadow img-fluid'>
+          <div style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', padding: '70px' }} className='card shadow img-fluid'>
 
             <div className=" align-items-center" >
               <h1 className='mb-3 text-light text-center'>gratafy</h1>
