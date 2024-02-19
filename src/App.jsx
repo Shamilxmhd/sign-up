@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-    setFormValues({ username: '', email: '', password: '', confirmPassword: '' })
+   
   };
 
 
